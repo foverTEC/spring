@@ -10,7 +10,6 @@ public class MainTest {
          String[] beanNamesForType = applicationContext.getBeanDefinitionNames();
          for(String name : beanNamesForType){
              System.out.println(name);
-
          }
 
 

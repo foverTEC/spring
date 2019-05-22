@@ -14,6 +14,7 @@ public class MyImportBeanRefister implements ImportBeanDefinitionRegistrar {
      */
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
         boolean iscolor = registry.containsBeanDefinition("com.zhubao.bean.Color");
+        //当容器中有Color.class时 才注册RainBow.class到容器中
         if(iscolor){
             //指定需要注册的bean:指定需要注册的类型信息 class
             RootBeanDefinition rootBeanDefinition = new RootBeanDefinition(RainBow.class);

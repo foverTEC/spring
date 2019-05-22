@@ -20,7 +20,7 @@ public class MainConfig {
     @Bean //id默认是使用方法名：person
     @Scope(value = "prototype" )
     @Lazy //懒加载
-    @Conditional(FalseCondition.class)
+    @Conditional(FalseCondition.class) //相当于使用注解注入value值 只不过这个值是个java类：通过反射获取对应类上的注解然后获取注解中的value值 做对应的操作
     /*
     1.多例的ioc容器启动时并不会创建实例：而是每次获取的时候才会创键新的对象
     * */
